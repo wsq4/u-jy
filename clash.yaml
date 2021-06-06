@@ -5,9 +5,9 @@ socks-port: 7890
 # allow local-lan connect
 allow-lan: true
 # Rule / Global / Direct
-mode: DIRECT
+mode: Direct
 # silent / info / warning / error / debug
-log-level: warning
+log-level: info
 # RESTful API
 external-controller: 0.0.0.0:9090
 # based on https://github.com/lhie1/Rules/blob/master/Clash/General_dns.yml
@@ -64,9 +64,8 @@ cfw-bypass:
   - 172.30.*
   - 172.31.*
   - 192.168.*
-  
-  
-  proxies:
+
+proxies:
   - {
       name: 'JP 2 - 443',
       type: trojan,

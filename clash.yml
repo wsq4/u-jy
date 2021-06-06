@@ -1,0 +1,66 @@
+# http proxy
+port: 1080
+# socks5 proxy
+socks-port: 7890
+# allow local-lan connect
+allow-lan: true
+# Rule / Global / Direct
+mode: DIRECT
+# silent / info / warning / error / debug
+log-level: warning
+# RESTful API
+external-controller: 0.0.0.0:9090
+# based on https://github.com/lhie1/Rules/blob/master/Clash/General_dns.yml
+dns:
+  enable: true
+  ipv6: true
+  listen: 0.0.0.0:53
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - '*.lan'
+    - localhost.ptlogin2.qq.com
+  nameserver:
+    - 114.114.115.115
+    - 8.8.8.8
+    - 223.5.5.5
+  fallback:
+    # hk
+    - 202.130.97.65
+    - 202.174.158.10
+    # tw
+    - 168.95.1.1
+    - 60.250.36.194
+    # jp
+    - 221.119.13.154
+    - 202.248.20.133
+    # other
+    - tcp://1.0.0.1
+    - tcp://8.8.4.4
+  fallback-filter:
+    geoip: true
+    ipcidr:
+      - 240.0.0.0/4
+cfw-latency-timeout: 3000
+cfw-bypass:
+  - localhost
+  - ::1
+  - 127.*
+  - 10.*
+  - 172.16.*
+  - 172.17.*
+  - 172.18.*
+  - 172.19.*
+  - 172.20.*
+  - 172.21.*
+  - 172.22.*
+  - 172.23.*
+  - 172.24.*
+  - 172.25.*
+  - 172.26.*
+  - 172.27.*
+  - 172.28.*
+  - 172.29.*
+  - 172.30.*
+  - 172.31.*
+  - 192.168.*

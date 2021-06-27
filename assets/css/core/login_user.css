@@ -142,7 +142,9 @@ input:-webkit-autofill {
   color: #fff;
 }
 
-li.active {
+.active {
+  width: fit-content;
+  padding: 2px 16px;
   border: 1px solid #fff;
   border-radius: 17px;
 }

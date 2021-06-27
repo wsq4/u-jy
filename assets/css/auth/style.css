@@ -616,3 +616,32 @@ input[type=checkbox]:checked:after {
 		color: red;
 		display: none;
 	}
+    .tit{
+        color: #F8F9FB;
+        width: 100%;
+        font-size: x-large;
+        text-align: center;
+    }
+    .download{
+        margin-left: 5px;
+        margin-right: 5px;
+
+        margin-top: 20px;
+        width: 100%;
+    }
+    .r1{
+        color: #F8F9FB;
+
+    }
+
+    .r2{
+        color: #F8F9FB;
+    }
+
+    a{
+        color: #F8F9Fb;
+    }
+
+    td{
+        padding: 25px 0 0 0;
+    }
